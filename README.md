@@ -1,4 +1,3 @@
-```markdown
 # selenium-java-tutorial
 
 A small Selenium + JUnit example project using Maven and Java 24. It contains a single test (`com.example.test.GettingStarted`) that demonstrates running Chrome in headless and non-headless modes.
@@ -16,6 +15,7 @@ Selenium Manager (bundled with Selenium 4.15+) will automatically download and m
 - `pom.xml` — Maven configuration and dependencies (Selenium, JUnit)
 - `src/test/java/com/example/test/GettingStarted.java` — example test
 - `.gitignore` — ignores build artifacts, IDE files, and drivers
+- `TROUBLESHOOTING.md` — comprehensive solutions for common issues
 
 ## Run the example test
 
@@ -37,8 +37,11 @@ Notes:
 - Use `-Dtest=...` to run a single test class. Remove it to run the full test suite.
 - The `GettingStarted` test uses simple `Thread.sleep` pauses for brevity. Replace with explicit waits (WebDriverWait) for production tests.
 
-## Common troubleshooting
+## Troubleshooting
 
+For detailed solutions to common issues (Chrome startup, network problems, element interactions, CI/CD, etc.), see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
+Quick fixes for common issues:
 - If Chrome won't start in headless mode on CI, ensure the following options are present in `ChromeOptions` (they are already set in the example): `--no-sandbox`, `--disable-dev-shm-usage`, and `--headless=new`.
 - If Selenium can't find a driver, make sure your machine has network access so Selenium Manager can download the driver, or install a matching `chromedriver` and put it on PATH.
 
